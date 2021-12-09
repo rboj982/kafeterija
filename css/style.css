@@ -125,3 +125,50 @@ header
   color: var(--clr-primery);
   background: var(--clr-primery-light);
 }
+/* 
+=========== 
+Skills 
+===========
+ */
+.skills {
+  background: var(--clr-gray-10);
+}
+.skill {
+  padding: 2.5rem;
+  text-align: center;
+  transition: var(--transition);
+}
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  transition: var(--transition);
+  display: inline-block;
+  color: var(--clr-primery);
+}
+.skill-title {
+  color: var(--clr-primery);
+}
+.skill-text {
+  color: var(--clr-primery);
+  max-width: 17rem;
+  margin: 0 auto;
+}
+.skill:hover {
+  background: var(--clr-white);
+  box-shadow: 3px 3px var(--clr-primery-light);
+}
+.skill:hover .skill-icon {
+  transform: translateY(-5px);
+}
+@media screen and (min-width: 576px) {
+  .skill {
+    float: left;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .skill {
+    float: left;
+    width: 25%;
+  }
+}
