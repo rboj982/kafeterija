@@ -172,3 +172,43 @@ Skills
     width: 25%;
   }
 }
+/* about sekcija*/
+.about-img,
+.about-info {
+  padding: 2rem 0rem;
+}
+.about-picture-container {
+  background: var(--clr-primery);
+  border: 0.5rem solid var(--clr-primery);
+  max-width: 30rem;
+  overflow: hidden;
+}
+.about-picture {
+  transition: var(--transition);
+}
+.about-picture-container:hover .about-picture {
+  opacity: 0.5;
+  transform: scale(1.2);
+}
+.about-text {
+  max-width: 26rem;
+  color: var(--clr-gray-5);
+}
+.section-title h3 {
+  font-family: var(--ff-secondary);
+  color: var(--clr-primery);
+}
+@media screen and (min-width: 992px) {
+  .about-img,
+  .about-info {
+    float: left;
+    width: 50%;
+  }
+  .about-info {
+    padding-left: 4rem;
+  }
+  .about-img {
+    padding-left: 26%;
+  }
+}
+/* end of about sekcija */
