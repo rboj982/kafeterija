@@ -126,6 +126,12 @@ header
   color: var(--clr-primery);
   background: var(--clr-primery-light);
 }
+.line {
+  margin-top: -2rem;
+  width: 100%;
+  height: 10px;
+  background: var(--clr-primery);
+}
 /* 
 =========== 
 Skills 
@@ -218,7 +224,7 @@ Skills
 /* osnovna pozicija dugmeta */
 #menuToggle {
   display: block;
-  position: relative;
+  position: fixed;
   top: 50px;
   left: 50px;
   z-index: 1;
@@ -226,12 +232,12 @@ Skills
 /* ankeri u otvorenom meniju */
 #menuToggle a {
   text-decoration: none;
-  color: var(--clr-white);
+  color: var(--clr-primery);
   transition: color 0.3s ease;
 }
 /* bojenje ankera na hover */
 #menuToggle a:hover {
-  color: var(--clr-primery);
+  color: var(--clr-white);
 }
 /* checkbox koji pozicioniramo na crtice i sakrivamo  */
 #menuToggle input {
@@ -248,8 +254,8 @@ Skills
 /* odavne gde se pominje span misli se na crtice. hamburger stilizuje i animira sve sta se desava na klik */
 #menuToggle span {
   display: block;
-  width: 33px;
-  height: 4px;
+  width: 35px;
+  height: 3.5px;
   margin-bottom: 5px;
   position: relative;
   background: var(--clr-primery);
@@ -270,7 +276,7 @@ Skills
 /* prva crta */
 #menuToggle input:checked ~ span {
   opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
+  transform: rotate(45deg) translate(0px, -1.5px);
   background: var(--clr-primery);
 }
 /* druga crta */
@@ -282,7 +288,7 @@ Skills
 /* trca crta */
 /* rotacija trece crte da bude X */
 #menuToggle input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, -1px);
+  transform: rotate(-45deg) translate(0, 0.5px);
 }
 /* otvoreni menu */
 #menu {
