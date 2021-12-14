@@ -400,3 +400,40 @@ end of products
 #menuToggle input:checked ~ ul {
   transform: none;
 }
+/* 
+============= 
+services 
+=============
+ */
+.service-img {
+  height: 17rem;
+  width: 20%;
+  object-fit: cover;
+}
+.services-title {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.service-img-container {
+  position: relative;
+}
+.service-icon {
+  position: absolute;
+  margin-left: 50%;
+  background: var(--clr-primery);
+  border-radius: 50%;
+  padding: 15px;
+  border: 0.2rem solid var (--clr-gray-7);
+  font-size: 1.5rem;
+  transform: translate(-50%, 50%);
+}
+.service-info {
+  background: var(--clr-gray-7);
+}
+@media screen and (min-width: 992px) {
+  .service-card {
+    width: 30%;
+    margin-right: 3.333%;
+  }
+}
