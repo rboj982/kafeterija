@@ -196,7 +196,7 @@ about sekcija
 .about-picture-container {
   background: var(--clr-primery);
   border: 0.5rem solid var(--clr-primery);
-  max-width: 40rem;
+  max-width: 25rem;
   overflow: hidden;
 }
 .about-picture {
@@ -270,7 +270,7 @@ products
 .product-img {
   border-radius: var(--readius);
   margin-bottom: 2rem;
-  height: 15rem;
+  height: 13rem;
   object-fit: cover;
 }
 .product-price {
@@ -291,7 +291,7 @@ products
 }
 @media screen and (min-width: 1200px) {
   .products-info {
-    margin-left: 21%;
+    margin-left: 20%;
     float: left;
     width: 20%;
   }
