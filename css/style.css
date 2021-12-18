@@ -19,7 +19,7 @@ Variables
   --clr-gray-7: #ebf0f3;
   --clr-white: #fff;
   --ff-primary: "Catamaran", sans-serif;
-  --ff-secondary: "Grand Hotel", cursive;
+  --ff-secondary: "Grand Hotel", "cursive";
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
   --readius: 0.5rem;
@@ -122,6 +122,7 @@ header
   border: none;
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--readius);
 }
 .btn:hover {
   color: var(--clr-primery);
@@ -139,7 +140,7 @@ Skills
 ===========
  */
 .skills {
-  background: var(--clr-gray-10);
+  background: var(--clr-gray-1);
 }
 .skill {
   padding: 2.5rem;
@@ -181,11 +182,8 @@ Skills
     width: 25%;
   }
 }
-/* 
-=============
-about sekcija
-=============
-*/
+/* /*  */
+/* ============= about sekcija ============= */
 .about-text {
   font-size: 1.23rem;
 }
@@ -196,7 +194,7 @@ about sekcija
 .about-picture-container {
   background: var(--clr-primery);
   border: 0.5rem solid var(--clr-primery);
-  max-width: 25rem;
+  max-width: 30rem;
   overflow: hidden;
 }
 .about-picture {
@@ -213,18 +211,27 @@ about sekcija
 .section-title h3 {
   font-family: var(--ff-secondary);
   color: var(--clr-primery);
+  font-size: 32px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .about-img,
   .about-info {
     float: left;
     width: 50%;
   }
   .about-info {
-    padding-left: 4rem;
+    padding-left: 0rem;
   }
   .about-img {
-    padding-left: 26%;
+    padding: 0%;
+    float: left;
+  }
+  .about-picture {
+    width: 20vw;
+    height: 30vh;
+  }
+  .about-picture-container {
+    margin-left: 50%;
   }
 }
 /* 
@@ -233,24 +240,25 @@ end of about sekcija
 ====================
  */
 /* debilno resen problem */
-.prazno {
-  background: var(--clr-white);
-  width: 100%;
-  /* height: 650px; */
-  margin-top: 60vh;
-}
+/* .prazno { */
+/* background: var(--clr-white); */
+/* width: 100%; */
+/* height: 650px; */
+/* margin-top: 60vh; */
+/* } */
 /* end of debilno resen problem */
 /*
 ========== 
 products 
 ========== 
-*/
-.products {
-  margin-top: 6vh;
-  width: 100%;
-  height: 400px;
-  background: var(--clr-gray-7);
-}
+/* */
+
+/* .products { */
+/* margin-top: 6vh; */
+/* width: 100%; */
+/* height: 400px; */
+/* background: var(--clr-gray-1); */
+/* } */
 .products article {
   padding: 2rem 0;
 }
@@ -291,24 +299,27 @@ products
 }
 @media screen and (min-width: 1200px) {
   .products-info {
-    margin-left: 20%;
     float: left;
-    width: 20%;
+    width: 15%;
   }
   .products-inventory {
     float: left;
-    width: 40%;
+    width: 45%;
   }
   .product {
     margin-bottom: 0;
-    padding: 0 1rem;
+    padding: 1rem;
+  }
+  .products {
+    width: 100%;
+    margin-left: 355px;
   }
 }
-/* 
-===============
-end of products
-===============
- */
+/* /*  */
+/* =============== */
+/* end of products */
+/* =============== */
+/* */
 /* ======================= */
 /* hamburger menu  */
 /* osnovna pozicija dugmeta */
@@ -338,10 +349,10 @@ end of products
   top: -7px;
   left: -5px;
   cursor: pointer;
-  opacity: 0; /* sakrivamo ga */
+  /* opacity: 0; sakrivamo ga */
   z-index: 2;
 }
-/* odavne gde se pominje span misli se na crtice. hamburger stilizuje i animira sve sta se desava na klik */
+/* /* odavne gde se pominje span misli se na crtice. hamburger stilizuje i animira sve sta se desava na klik */
 #menuToggle span {
   display: block;
   width: 35px;
@@ -400,40 +411,55 @@ end of products
 #menuToggle input:checked ~ ul {
   transform: none;
 }
-/* 
-============= 
-services 
-=============
- */
-.service-img {
-  height: 17rem;
-  width: 20%;
-  object-fit: cover;
-}
-.services-title {
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.service-img-container {
-  position: relative;
-}
-.service-icon {
-  position: absolute;
-  margin-left: 50%;
-  background: var(--clr-primery);
-  border-radius: 50%;
-  padding: 15px;
-  border: 0.2rem solid var (--clr-gray-7);
-  font-size: 1.5rem;
-  transform: translate(-50%, 50%);
-}
-.service-info {
-  background: var(--clr-gray-7);
-}
-@media screen and (min-width: 992px) {
-  .service-card {
-    width: 30%;
-    margin-right: 3.333%;
-  }
-}
+/* /*  */
+/* =============  */
+/* services  */
+/* ============= */
+/* */
+/* .service-img { */
+/* height: 17rem; */
+/* width: 100%; */
+/* object-fit: cover; */
+/* } */
+/* .services-title { */
+/* text-align: center; */
+/* margin-top: 2rem; */
+/* margin-bottom: 2rem; */
+/* } */
+/* .service-img-container { */
+/* position: relative; */
+/* } */
+/* .service-icon { */
+/* position: absolute; */
+/* margin-left: 50%; */
+/* background: var(--clr-primery-light); */
+/* border-radius: 50%; */
+/* padding: 15px; */
+/* border: 0.2rem solid var(--clr-gray-7); */
+/* font-size: 1.5rem; */
+/* transform: translate(-50%, 50%); */
+/* margin-top: -10%; */
+/* } */
+/* .service-info { */
+/* background: var(--clr-gray-7); */
+/* } */
+/* .service-card { */
+/* float: left; */
+/* width: 20%; */
+/*  */
+/* margin: 10px; */
+/* } */
+
+/* @media screen and (min-width: 768px) { */
+/* .service-card { */
+/* float: left; */
+/* width: 45%; */
+/* margin-right: 5%; */
+/* } */
+/* } */
+/* @media screen and (min-width: 992px) { */
+/* .service-card { */
+/* width: 30%; */
+/* margin-right: 3.333%; */
+/* } */
+/* } */ ;
