@@ -53,10 +53,10 @@ h4 {
   margin-bottom: 0.75rem;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 6rem;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 h3 {
   font-size: 1.5rem;
@@ -113,13 +113,13 @@ header
   text-transform: uppercase;
   background: var(--clr-primery);
   color: var(--clr-white);
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1.2rem;
   letter-spacing: var(--spacing);
   display: inline-block;
   font-weight: 700;
   transition: var(--transition);
-  font-size: 1rem;
-  border: none;
+  font-size: 1.5rem;
+  border: dashed var(--clr-primery);
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--readius);
@@ -133,6 +133,12 @@ header
   width: 100%;
   height: 10px;
   background: var(--clr-primery);
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+    padding: 4rem 1rem;
+  }
 }
 /* 
 =========== 
@@ -164,7 +170,7 @@ Skills
   margin: 0 auto;
 }
 .skill:hover {
-  background: var(--clr-gray-7);
+  background: var(--clr-white);
   box-shadow: 1px 1px var(--clr-gray-7);
 }
 .skill:hover .skill-icon {
@@ -184,6 +190,12 @@ Skills
 }
 /* /*  */
 /* ============= about sekcija ============= */
+.section-center {
+  padding: 4rem 0;
+  width: 85vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
 .about-text {
   font-size: 1.23rem;
 }
@@ -213,9 +225,29 @@ Skills
   color: var(--clr-primery);
   font-size: 32px;
 }
+.section-title {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 576px) {
+  .about-img,
+  .about-info {
+    margin: 16px 20%;
+    float: left;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .about-img,
+  .about-info {
+    margin: 16px 20%;
+    float: left;
+    width: 50%;
+  }
+}
 @media screen and (min-width: 1200px) {
   .about-img,
   .about-info {
+    margin: 32px 0;
     float: left;
     width: 50%;
   }
@@ -230,39 +262,93 @@ Skills
     width: 20vw;
     height: 30vh;
   }
-  .about-picture-container {
-    margin-left: 50%;
-  }
 }
+/* =========  animation ========== */
+/* @keyframes bounce { */
+/* 0% { */
+/* transform: scale(1); */
+/* } */
+/* 50% { */
+/* transform: scale(2); */
+/* } */
+/* 100% { */
+/* transform: scale(1); */
+/* } */
+/* } */
+/* @keyframes slideFromRight { */
+/* 0% { */
+/* transform: translateX(1000px); */
+/* opacity: 0; */
+/* } */
+/* 50% { */
+/* transform: translateX(-200px); */
+/* opacity: 0.5; */
+/* } */
+/* 75% { */
+/* transform: translateX(50px); */
+/* opacity: 0.75; */
+/* } */
+/* 100% { */
+/* transform: translateX(0px); */
+/* opacity: 1; */
+/* } */
+/* } */
+/* @keyframes slideFromLeft { */
+/* 0% { */
+/* transform: translateX(-1000px); */
+/* opacity: 0; */
+/* } */
+/* 50% { */
+/* transform: translateX(200px); */
+/* opacity: 0.5; */
+/* } */
+/* 75% { */
+/* transform: translateX(-50px); */
+/* opacity: 0.75; */
+/* } */
+/* 100% { */
+/* transform: translateX(0px); */
+/* opacity: 1; */
+/* } */
+/* } */
+/* @keyframes show { */
+/* 0% { */
+/* transform: scale(1.5); */
+/* opacity: 0; */
+/* } */
+/* 50% { */
+/* transform: scale(2); */
+/* opacity: 0.5; */
+/* } */
+/* 100% { */
+/* transform: scale(1); */
+/* opacity: 1; */
+/* } */
+/* } */
+/* =========  end of animation ========== */
 /* 
 ====================
 end of about sekcija
 ====================
  */
-/* debilno resen problem */
-/* .prazno { */
-/* background: var(--clr-white); */
-/* width: 100%; */
-/* height: 650px; */
-/* margin-top: 60vh; */
-/* } */
-/* end of debilno resen problem */
+/* ======= debilno resen problem ====== */
+.prazno {
+  clear: both;
+}
+/*======= end of debilno resen problem =======*/
 /*
 ========== 
 products 
 ========== 
 /* */
-
-/* .products { */
-/* margin-top: 6vh; */
-/* width: 100%; */
-/* height: 400px; */
-/* background: var(--clr-gray-1); */
-/* } */
 .products article {
   padding: 2rem 0;
 }
-
+.products {
+  background: var(--clr-gray-7);
+  width: 100%;
+  height: 40vh;
+}
 .product-text {
   color: var(--clr-grey-5);
   max-width: 26rem;
@@ -276,15 +362,30 @@ products
   margin-bottom: 2rem;
 }
 .product-img {
-  border-radius: var(--readius);
+  border-radius: 10%;
   margin-bottom: 2rem;
-  height: 13rem;
+  height: 16rem;
+  width: 16rem;
   object-fit: cover;
 }
 .product-price {
   color: var(--clr-primery);
   font-size: 1.5rem;
 }
+/* } */
+/* =============================== */
+/* ?????????????????????????? */
+/* =============================== */
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* ================================ */
+/* ???????????????????????????? */
+/* ================================ */
+
 @media screen and (min-width: 768px) {
   .product {
     float: left;
@@ -300,19 +401,15 @@ products
 @media screen and (min-width: 1200px) {
   .products-info {
     float: left;
-    width: 15%;
+    width: 30%;
   }
   .products-inventory {
     float: left;
-    width: 45%;
+    width: 70%;
   }
   .product {
-    margin-bottom: 0;
-    padding: 1rem;
-  }
-  .products {
-    width: 100%;
-    margin-left: 355px;
+    margin: bottom 2rem;
+    padding: 0 1rem;
   }
 }
 /* /*  */
@@ -349,7 +446,7 @@ products
   top: -7px;
   left: -5px;
   cursor: pointer;
-  /* opacity: 0; sakrivamo ga */
+  opacity: 0;
   z-index: 2;
 }
 /* /* odavne gde se pominje span misli se na crtice. hamburger stilizuje i animira sve sta se desava na klik */
