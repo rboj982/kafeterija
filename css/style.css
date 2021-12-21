@@ -538,6 +538,7 @@ crtice hamburger menija */
   object-fit: cover;
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
+  /* box-shadow: 0px 30px 70px 0px rgba(0, 0, 0, 0.2); */
 }
 .services-title {
   text-align: center;
@@ -592,7 +593,7 @@ crtice hamburger menija */
   border-radius: 30px;
   transition-duration: 0.7s;
   transform: scale(1.02);
-  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.4);
 }
 @media screen and (max-width: 768px) {
   .service-card {
