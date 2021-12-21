@@ -69,12 +69,7 @@ p {
 }
 /* 
 ============
-navbar
-============
-/* 
- /*
-============
-header
+-- header --
 ============
  */
 .header {
@@ -141,9 +136,201 @@ header
   }
 }
 /* 
-=========== 
-Skills 
-===========
+==========================
+---- end of header -------
+==========================
+------ hamburger menu ----
+==========================
+/* osnovna pozicija dugmeta */
+#menuToggle {
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+}
+/* ankeri u otvorenom meniju */
+#menuToggle a {
+  text-decoration: none;
+  color: var(--clr-primery);
+  transition: color 0.3s ease;
+}
+/* bojenje ankera na hover */
+#menuToggle a:hover {
+  color: var(--clr-white);
+}
+/* checkbox koji pozicioniramo na crtice i sakrivamo  */
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+/* /* odavne gde se pominje span misli se na crtice. 
+hamburger stilizuje i animira sve sta se desava na klik */
+#menuToggle span {
+  display: block;
+  width: 35px;
+  height: 3.5px;
+  margin-bottom: 5px;
+  position: relative;
+  background: var(--clr-primery);
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transforme 0.5s cubic-bezier(0.77, 0.2, 0 05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+/* ovde koristimo pseudo selektore da ciljamo na tri 
+crtice hamburger menija */
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+#menuToggle span:last-child(2) {
+  transform-origin: 0% 100%;
+}
+/* transformacije crtice u X kad kliknemo na dugme */
+/* prva crta */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(0px, -1.5px);
+  background: var(--clr-primery);
+}
+/* druga crta */
+/* nestajanje srednje crte */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+/* trca crta */
+/* rotacija trece crte da bude X */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, 0.5px);
+}
+/* otvoreni menu */
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: var(--clr-primery-light);
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0 05, 1);
+}
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+/* 
+============================ 
+--- end of hamburger menu --
+============================
+
+============================
+?????????????????????????? 
+============================
+ */
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* 
+ ===========================
+???????????????????????????? 
+============================
+
+============================
+------- animation ----------
+============================
+ */
+/* @keyframes bounce { */
+/* 0% { */
+/* transform: scale(1); */
+/* } */
+/* 50% { */
+/* transform: scale(2); */
+/* } */
+/* 100% { */
+/* transform: scale(1); */
+/* } */
+/* } */
+/* @keyframes slideFromRight { */
+/* 0% { */
+/* transform: translateX(1000px); */
+/* opacity: 0; */
+/* } */
+/* 50% { */
+/* transform: translateX(-200px); */
+/* opacity: 0.5; */
+/* } */
+/* 75% { */
+/* transform: translateX(50px); */
+/* opacity: 0.75; */
+/* } */
+/* 100% { */
+/* transform: translateX(0px); */
+/* opacity: 1; */
+/* } */
+/* } */
+/* @keyframes slideFromLeft { */
+/* 0% { */
+/* transform: translateX(-1000px); */
+/* opacity: 0; */
+/* } */
+/* 50% { */
+/* transform: translateX(200px); */
+/* opacity: 0.5; */
+/* } */
+/* 75% { */
+/* transform: translateX(-50px); */
+/* opacity: 0.75; */
+/* } */
+/* 100% { */
+/* transform: translateX(0px); */
+/* opacity: 1; */
+/* } */
+/* } */
+/* @keyframes show { */
+/* 0% { */
+/* transform: scale(1.5); */
+/* opacity: 0; */
+/* } */
+/* 50% { */
+/* transform: scale(2); */
+/* opacity: 0.5; */
+/* } */
+/* 100% { */
+/* transform: scale(1); */
+/* opacity: 1; */
+/* } */
+/* } */
+/* 
+============================
+ ---- end of animation ----- 
+============================
+----------- debilno resen problem --------
+ */
+.prazno {
+  clear: both;
+}
+/*
+----- end of debilno resen problem -------
+============================
+------------Skills---------- 
+============================
  */
 .skills {
   background: var(--clr-gray-1);
@@ -188,8 +375,13 @@ Skills
     width: 25%;
   }
 }
-/* /*  */
-/* ============= about sekcija ============= */
+/* 
+============================ 
+----- end of Skills -------- 
+============================
+------- about sekcija ------
+============================
+ */
 .section-center {
   padding: 4rem 0;
   width: 85vw;
@@ -263,91 +455,21 @@ Skills
     height: 30vh;
   }
 }
-/* =========  animation ========== */
-/* @keyframes bounce { */
-/* 0% { */
-/* transform: scale(1); */
-/* } */
-/* 50% { */
-/* transform: scale(2); */
-/* } */
-/* 100% { */
-/* transform: scale(1); */
-/* } */
-/* } */
-/* @keyframes slideFromRight { */
-/* 0% { */
-/* transform: translateX(1000px); */
-/* opacity: 0; */
-/* } */
-/* 50% { */
-/* transform: translateX(-200px); */
-/* opacity: 0.5; */
-/* } */
-/* 75% { */
-/* transform: translateX(50px); */
-/* opacity: 0.75; */
-/* } */
-/* 100% { */
-/* transform: translateX(0px); */
-/* opacity: 1; */
-/* } */
-/* } */
-/* @keyframes slideFromLeft { */
-/* 0% { */
-/* transform: translateX(-1000px); */
-/* opacity: 0; */
-/* } */
-/* 50% { */
-/* transform: translateX(200px); */
-/* opacity: 0.5; */
-/* } */
-/* 75% { */
-/* transform: translateX(-50px); */
-/* opacity: 0.75; */
-/* } */
-/* 100% { */
-/* transform: translateX(0px); */
-/* opacity: 1; */
-/* } */
-/* } */
-/* @keyframes show { */
-/* 0% { */
-/* transform: scale(1.5); */
-/* opacity: 0; */
-/* } */
-/* 50% { */
-/* transform: scale(2); */
-/* opacity: 0.5; */
-/* } */
-/* 100% { */
-/* transform: scale(1); */
-/* opacity: 1; */
-/* } */
-/* } */
-/* =========  end of animation ========== */
 /* 
-====================
-end of about sekcija
-====================
- */
-/* ======= debilno resen problem ====== */
-.prazno {
-  clear: both;
-}
-/*======= end of debilno resen problem =======*/
-/*
-========== 
-products 
-========== 
-/* */
+============================
+--- end of about sekcija ---
+============================
+============================ 
+-------- products ----------
+============================ 
+*/
 .products article {
   padding: 2rem 0;
 }
 .products {
   background: var(--clr-gray-7);
   width: 100%;
-  height: 40vh;
+  max-height: 45vh;
 }
 .product-text {
   color: var(--clr-grey-5);
@@ -372,25 +494,14 @@ products
   color: var(--clr-primery);
   font-size: 1.5rem;
 }
-/* } */
-/* =============================== */
-/* ?????????????????????????? */
-/* =============================== */
-.clearfix::after,
-.clearfix::before {
-  content: "";
-  clear: both;
-  display: table;
-}
-/* ================================ */
-/* ???????????????????????????? */
-/* ================================ */
-
 @media screen and (min-width: 768px) {
   .product {
     float: left;
     width: 50%;
     padding-right: 2rem;
+  }
+  .products {
+    max-height: 50vh;
   }
 }
 @media screen and (min-width: 992px) {
@@ -412,151 +523,87 @@ products
     padding: 0 1rem;
   }
 }
-/* /*  */
-/* =============== */
-/* end of products */
-/* =============== */
-/* */
-/* ======================= */
-/* hamburger menu  */
-/* osnovna pozicija dugmeta */
-#menuToggle {
-  display: block;
-  position: fixed;
-  top: 50px;
-  left: 50px;
-  z-index: 1;
-}
-/* ankeri u otvorenom meniju */
-#menuToggle a {
-  text-decoration: none;
-  color: var(--clr-primery);
-  transition: color 0.3s ease;
-}
-/* bojenje ankera na hover */
-#menuToggle a:hover {
-  color: var(--clr-white);
-}
-/* checkbox koji pozicioniramo na crtice i sakrivamo  */
-#menuToggle input {
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  cursor: pointer;
-  opacity: 0;
-  z-index: 2;
-}
-/* /* odavne gde se pominje span misli se na crtice. hamburger stilizuje i animira sve sta se desava na klik */
-#menuToggle span {
-  display: block;
-  width: 35px;
-  height: 3.5px;
-  margin-bottom: 5px;
-  position: relative;
-  background: var(--clr-primery);
-  border-radius: 3px;
-  z-index: 1;
-  transform-origin: 4px 0px;
-  transition: transforme 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-}
-/* ovde koristimo pseudo selektore da ciljamo na tri crtice hamburger menija */
-#menuToggle span:first-child {
-  transform-origin: 0% 0%;
-}
-#menuToggle span:last-child(2) {
-  transform-origin: 0% 100%;
-}
-/* transformacije crtice u X kad kliknemo na dugme */
-/* prva crta */
-#menuToggle input:checked ~ span {
-  opacity: 1;
-  transform: rotate(45deg) translate(0px, -1.5px);
-  background: var(--clr-primery);
-}
-/* druga crta */
-/* nestajanje srednje crte */
-#menuToggle input:checked ~ span:nth-last-child(3) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-/* trca crta */
-/* rotacija trece crte da bude X */
-#menuToggle input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, 0.5px);
-}
-/* otvoreni menu */
-#menu {
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  background: var(--clr-primery-light);
-  list-style-type: none;
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-}
-#menu li {
-  padding: 10px 0;
-  font-size: 22px;
-}
-#menuToggle input:checked ~ ul {
-  transform: none;
-}
-/* /*  */
-/* =============  */
-/* services  */
-/* ============= */
-/* */
-/* .service-img { */
-/* height: 17rem; */
-/* width: 100%; */
-/* object-fit: cover; */
-/* } */
-/* .services-title { */
-/* text-align: center; */
-/* margin-top: 2rem; */
-/* margin-bottom: 2rem; */
-/* } */
-/* .service-img-container { */
-/* position: relative; */
-/* } */
-/* .service-icon { */
-/* position: absolute; */
-/* margin-left: 50%; */
-/* background: var(--clr-primery-light); */
-/* border-radius: 50%; */
-/* padding: 15px; */
-/* border: 0.2rem solid var(--clr-gray-7); */
-/* font-size: 1.5rem; */
-/* transform: translate(-50%, 50%); */
-/* margin-top: -10%; */
-/* } */
-/* .service-info { */
-/* background: var(--clr-gray-7); */
-/* } */
-/* .service-card { */
-/* float: left; */
-/* width: 20%; */
-/*  */
-/* margin: 10px; */
-/* } */
 
-/* @media screen and (min-width: 768px) { */
-/* .service-card { */
-/* float: left; */
-/* width: 45%; */
-/* margin-right: 5%; */
-/* } */
-/* } */
-/* @media screen and (min-width: 992px) { */
-/* .service-card { */
-/* width: 30%; */
-/* margin-right: 3.333%; */
-/* } */
-/* } */ ;
+/* 
+========================
+--- end of products ----
+========================
+----- services ---------
+========================
+/* 
+/*  */
+.service-img {
+  height: 17rem;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+}
+.services-title {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.service-img-container {
+  position: relative;
+}
+.service-icon {
+  position: absolute;
+  margin-left: 50%;
+  background: var(--clr-primery-light);
+  border-radius: 40%;
+  padding: 15px;
+  border: 0.4rem solid var(--clr-gray-7);
+  font-size: 1.5rem;
+  transform: translate(-50%, 50%);
+  margin-top: -20%;
+}
+.service-info {
+  background: var(--clr-gray-7);
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
+.service-inf-2 {
+  margin-bottom: 2.6rem;
+}
+.service-card {
+  float: left;
+  width: 20%;
+}
+.service-btn {
+  padding: 8px;
+}
+.service-info h3 {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+.service-inf-1,
+.service-inf-2,
+.service-inf-3 {
+  padding: 0 15px 0 15px;
+}
+.service-btn {
+  font-size: 1rem;
+
+  transform: translateX(40%) translateY(-10%);
+}
+.service-card:hover {
+  border-radius: 30px;
+  transition-duration: 0.7s;
+  transform: scale(1.02);
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 768px) {
+  .service-card {
+    float: left;
+    width: 45%;
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .service-card {
+    width: 30%;
+    margin-right: 3.333%;
+  }
+}
