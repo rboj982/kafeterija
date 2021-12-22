@@ -236,9 +236,7 @@ crtice hamburger menija */
 ============================ 
 --- end of hamburger menu --
 ============================
-
-============================
-?????????????????????????? 
+--------- clearfix ---------
 ============================
  */
 .clearfix::after,
@@ -249,9 +247,7 @@ crtice hamburger menija */
 }
 /* 
  ===========================
-???????????????????????????? 
-============================
-
+----- end of clearfix ------
 ============================
 ------- animation ----------
 ============================
@@ -523,7 +519,6 @@ crtice hamburger menija */
     padding: 0 1rem;
   }
 }
-
 /* 
 ========================
 --- end of products ----
@@ -607,4 +602,56 @@ crtice hamburger menija */
     width: 30%;
     margin-right: 3.333%;
   }
+}
+/* 
+======================
+======================
+ */
+.test {
+  background: #ebf0f3;
+  padding: 5px 10px;
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.parent {
+  padding: 10px;
+  margin: 10px auto;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.one {
+  background: #617d98;
+  width: 300px;
+  height: 300px;
+  display: flex;
+}
+.two {
+  background: #beed8c;
+  width: 300px;
+  height: 300px;
+  display: flex;
+}
+.three {
+  background: thistle;
+  width: 300px;
+  height: 300px;
+  display: flex;
+}
+.four {
+  background: paleturquoise;
+  width: 300px;
+  height: 300px;
+  display: flex;
+}
+.five {
+  background: chocolate;
+  width: 300px;
+  height: 300px;
+  display: flex;
 }
