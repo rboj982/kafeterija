@@ -525,15 +525,13 @@ crtice hamburger menija */
 ========================
 ----- services ---------
 ========================
-/* 
-/*  */
+*/
 .service-img {
   height: 17rem;
   width: 100%;
   object-fit: cover;
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
-  /* box-shadow: 0px 30px 70px 0px rgba(0, 0, 0, 0.2); */
 }
 .services-title {
   text-align: center;
@@ -604,54 +602,94 @@ crtice hamburger menija */
   }
 }
 /* 
-======================
-======================
+=======================
+----end of services----
+=======================
+----other services-----
+=======================
  */
-.test {
-  background: #ebf0f3;
-  padding: 5px 10px;
+.master {
+  background: var(--clr-gray-7);
+  display: flex;
+  padding: 20px;
   width: 100%;
-  margin: 10px auto;
+  margin-top: 10rem;
+}
+.parent1 {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.parent {
-  padding: 10px;
-  margin: 10px auto;
-  display: flex;
-  width: 100%;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  margin: 20px 400px;
 }
-.one {
-  background: #617d98;
-  width: 300px;
-  height: 300px;
+.slika {
+  border-radius: 10%;
+  max-width: 15vw;
+}
+.slika:hover {
+  box-shadow: 0px 10px 10px 0px var(--clr-gray-5);
+  transition-duration: 1s;
+  transform: translateY(-30px) scale(1.2);
+}
+.child2 {
+  width: 70%;
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-.two {
-  background: #beed8c;
-  width: 300px;
-  height: 300px;
-  display: flex;
+.child1 {
+  width: 30%;
+  margin: 10px;
 }
-.three {
-  background: thistle;
-  width: 300px;
-  height: 300px;
-  display: flex;
+.text1 {
+  text-align: center;
+  font-family: var(--ff-secondary);
+  font-size: 2rem;
 }
-.four {
-  background: paleturquoise;
-  width: 300px;
-  height: 300px;
-  display: flex;
+.text2,
+.text3 {
+  font-family: var(--ff-primary);
+  text-align: center;
 }
-.five {
-  background: chocolate;
-  width: 300px;
-  height: 300px;
-  display: flex;
+.dugme {
+  position: relative;
+  width: 100%;
+  height: 5rem;
 }
+.dugmence {
+  position: absolute;
+  text-align: center;
+  background: var(--clr-primery);
+  font-size: 1.5rem;
+  padding: 0px 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: var(--readius);
+}
+.dugmence:hover {
+  background: var(--clr-primery-light);
+  transition-duration: 0.3s;
+  transform: translateY(-30px) translateX(-115px);
+  box-shadow: 0px 10px 30px 0px var(--clr-gray-5);
+}
+.text4 {
+  margin: 11px;
+}
+.kartica {
+  margin: 10px 30px;
+}
+.kartica h2 {
+  color: #678e3e;
+  font-style: italic;
+  text-align: center;
+}
+.kartica h3 {
+  color: #617d98;
+  text-align: center;
+}
+/* 
+=======================
+----other services-----
+=======================
+ */
