@@ -601,6 +601,15 @@ crtice hamburger menija */
     margin-right: 3.333%;
   }
 }
+@media screen and (min-width: 1200px) {
+  .service-card {
+    width: 30%;
+    margin-right: 3%;
+  }
+  .section-title {
+    text-align: center;
+  }
+}
 /* 
 =======================
 ----end of services----
@@ -689,6 +698,67 @@ crtice hamburger menija */
 .kartica h3 {
   color: #617d98;
   text-align: center;
+}
+@media screen and (min-width: 350px) {
+  .parent1 {
+    margin-right: 10px;
+    float: left;
+    margin-left: auto;
+    display: block;
+  }
+  .child1 {
+    transform: translate(50%, 1%);
+  }
+  .dugmence {
+    margin-left: 60%;
+  }
+  .text4 {
+    margin-right: -100px;
+  }
+  .child2 {
+    display: block;
+  }
+  .kartica {
+    width: 100%;
+  }
+  .slika {
+    margin-left: 11%;
+    max-width: 200px;
+    max-height: 170px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .parent1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 100%;
+  }
+  .child1 {
+    margin: auto;
+    margin-left: 20%;
+  }
+  .child2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 1px;
+  }
+  .dugmence {
+    margin-left: 1%;
+  }
+  .kartica {
+    margin: 2px;
+  }
+  .slika {
+    margin: auto;
+  }
+  .kartica h2 {
+    font-size: 2rem;
+  }
 }
 /* 
 =======================
