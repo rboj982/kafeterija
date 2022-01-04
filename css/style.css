@@ -869,9 +869,15 @@ crtice hamburger menija */
   font-size: 1rem;
   color: var(--clr-gray-1);
 }
+.form-group {
+  box-shadow: 0px 1px 5px 0px var(--clr-gray-5);
+}
 .form-group:hover {
-  transition-duration: 1s;
-  box-shadow: 0px 10px 30px 0px var(--clr-gray-5);
+  transition-duration: 2s;
+  box-shadow: 0px 5px 15px 0px var(--clr-gray-5);
+}
+.email {
+  text-transform: lowercase;
 }
 @media screen and (min-width: 350px) {
   .form-group {
@@ -922,15 +928,62 @@ crtice hamburger menija */
     flex-direction: row;
   }
   .contact-info {
-    width: 50%;
+    width: 40%;
   }
   .contact-form {
-    width: 50%;
+    width: 60%;
+    margin-bottom: 10px;
   }
   .form-group {
     width: 100%;
   }
   .form-group h3 {
     margin: 0;
+  }
+  #name,
+  #email,
+  #message {
+    line-height: 2.5rem;
+    margin-bottom: 8px;
+    width: 95%;
+  }
+}
+/* 
+===========================
+---- end contacte ------
+===========================
+-------- footer ----------
+===========================
+*/
+.footer {
+  background: var(--clr-gray-1);
+}
+.footer-text {
+  text-align: center;
+  color: var(--clr-white);
+}
+.footer-title {
+  color: var(--clr-primery);
+}
+.social-icon {
+  margin: 5px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--clr-white);
+}
+.social-icon:hover {
+  transition-duration: 1s;
+  color: var(--clr-primery-light);
+}
+@media screen and (min-width: 1100px) {
+  .footer > .section-center {
+    display: block;
+  }
+  .social-icon {
+    margin: 10px;
+    font-size: 2.5rem;
+  }
+  .footer-text {
+    font-size: 1.3rem;
   }
 }
