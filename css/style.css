@@ -91,18 +91,20 @@ p {
   color: var(--clr-primery);
   animation: right 3s 1;
 }
-@keyframes right {
-  0% {
-    transform: translate(1600px);
-  }
-  50% {
-    color: var(--clr-white);
-  }
-  75% {
-    color: var(--clr-primery);
-  }
-  100% {
-    transform: translate(0px);
+@media screen and (min-width: 350px) {
+  @keyframes right {
+    0% {
+      transform: translate(1600px);
+    }
+    50% {
+      color: var(--clr-white);
+    }
+    75% {
+      color: var(--clr-primery);
+    }
+    100% {
+      transform: translate(0px);
+    }
   }
 }
 .banner h1 {
@@ -112,18 +114,20 @@ p {
   margin-bottom: 2rem;
   animation: left 3s 1;
 }
-@keyframes left {
-  0% {
-    transform: translate(-1600px);
-  }
-  50% {
-    color: var(--clr-primery);
-  }
-  75% {
-    color: var(--clr-white);
-  }
-  100% {
-    transform: translate(0px);
+@media screen and (min-width: 350px) {
+  @keyframes left {
+    0% {
+      transform: translate(-1600px);
+    }
+    50% {
+      color: var(--clr-primery);
+    }
+    75% {
+      color: var(--clr-white);
+    }
+    100% {
+      transform: translate(0px);
+    }
   }
 }
 .banner-btn {
@@ -132,12 +136,14 @@ p {
   padding: 1rem 1.75rem;
   animation: bottom 5s 1;
 }
-@keyframes bottom {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+@media screen and (min-width: 350px) {
+  @keyframes bottom {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 .btn {
@@ -244,15 +250,17 @@ hamburger stilizuje i animira sve sta se desava na klik */
   opacity: 0.55s ease;
   animation: up 3s infinite;
 }
-@keyframes up {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scaleY(1.5) scale(1.5);
-  }
-  100% {
-    transform: scale(1);
+@media screen and (min-width: 350px) {
+  @keyframes up {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scaleY(1.5) scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 }
 /* ovde koristimo pseudo selektore da ciljamo na tri 
@@ -271,13 +279,15 @@ crtice hamburger menija */
   background: var(--clr-primery);
   animation: y 2s 1;
 }
-@keyframes y {
-  0% {
-    transform: rotate(45deg);
-  }
-  100% {
-    transform: rotate(405deg);
-    background: var(--clr-primery-light);
+@media screen and (min-width: 350px) {
+  @keyframes y {
+    0% {
+      transform: rotate(45deg);
+    }
+    100% {
+      transform: rotate(405deg);
+      background: var(--clr-primery-light);
+    }
   }
 }
 /* druga crta */
@@ -292,13 +302,15 @@ crtice hamburger menija */
   transform: rotate(-45deg) translate(0, 0.5px);
   animation: x 2s 1;
 }
-@keyframes x {
-  0% {
-    transform: rotate(-45deg);
-  }
-  100% {
-    transform: rotate(-405deg);
-    background: var(--clr-primery-light);
+@media screen and (min-width: 350px) {
+  @keyframes x {
+    0% {
+      transform: rotate(-45deg);
+    }
+    100% {
+      transform: rotate(-405deg);
+      background: var(--clr-primery-light);
+    }
   }
 }
 /* otvoreni menu  */
@@ -313,7 +325,7 @@ crtice hamburger menija */
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0 05, 1);
-  opacity: 0.7;
+  opacity: 0.9;
 }
 #menu li {
   padding: 10px 0;
@@ -631,6 +643,9 @@ crtice hamburger menija */
     font-size: 1rem;
     transform: translate(-50%, 20%);
   }
+  .card-three {
+    display: none;
+  }
 }
 @media screen and (min-width: 700px) {
   .service-card {
@@ -644,6 +659,9 @@ crtice hamburger menija */
   .service-icon {
     font-size: 1.5rem;
     transform: translate(-50%, 20%);
+  }
+  .card-three {
+    display: block;
   }
 }
 @media screen and (min-width: 1200px) {
