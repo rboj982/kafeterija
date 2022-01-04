@@ -78,7 +78,6 @@ p {
     url(../images/main-bcg.jpg) center/cover no-repeat fixed;
   position: relative;
   top: -30px; /* resenje za belo polje  */
-  /* animation */
 }
 .banner {
   text-align: center;
@@ -90,19 +89,56 @@ p {
 .banner h2 {
   font-family: var(--ff-secondary);
   color: var(--clr-primery);
-  /* animation */
+  animation: right 3s 1;
+}
+@keyframes right {
+  0% {
+    transform: translate(1600px);
+  }
+  50% {
+    color: var(--clr-white);
+  }
+  75% {
+    color: var(--clr-primery);
+  }
+  100% {
+    transform: translate(0px);
+  }
 }
 .banner h1 {
   text-transform: capitalize;
   color: var(--clr-white);
   margin-top: 1.25rem;
   margin-bottom: 2rem;
-  /* animation */
+  animation: left 3s 1;
+}
+@keyframes left {
+  0% {
+    transform: translate(-1600px);
+  }
+  50% {
+    color: var(--clr-primery);
+  }
+  75% {
+    color: var(--clr-white);
+  }
+  100% {
+    transform: translate(0px);
+  }
 }
 .banner-btn {
   outline: 0.125rem solid var(--clr-primery);
   font-size: 1.25rem;
   padding: 1rem 1.75rem;
+  animation: bottom 5s 1;
+}
+@keyframes bottom {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .btn {
   text-transform: uppercase;
@@ -203,8 +239,21 @@ hamburger stilizuje i animira sve sta se desava na klik */
   border-radius: 3px;
   z-index: 1;
   transform-origin: 4px 0px;
-  transition: transforme 0.5s cubic-bezier(0.77, 0.2, 0 05, 1),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transforme 0.5s cubic-bezier(0.77, 0.2, 0 05, 1);
+  background: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  opacity: 0.55s ease;
+  animation: up 3s infinite;
+}
+@keyframes up {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scaleY(1.5) scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 /* ovde koristimo pseudo selektore da ciljamo na tri 
 crtice hamburger menija */
@@ -218,8 +267,18 @@ crtice hamburger menija */
 /* prva crta */
 #menuToggle input:checked ~ span {
   opacity: 1;
-  transform: rotate(45deg) translate(0px, -1.5px);
+  transform: rotate(45deg) translate(0px, -1.54px);
   background: var(--clr-primery);
+  animation: y 2s 1;
+}
+@keyframes y {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+    background: var(--clr-primery-light);
+  }
 }
 /* druga crta */
 /* nestajanje srednje crte */
@@ -231,8 +290,18 @@ crtice hamburger menija */
 /* rotacija trece crte da bude X */
 #menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, 0.5px);
+  animation: x 2s 1;
 }
-/* otvoreni menu */
+@keyframes x {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(-405deg);
+    background: var(--clr-primery-light);
+  }
+}
+/* otvoreni menu  */
 #menu {
   position: absolute;
   width: 300px;
@@ -244,6 +313,7 @@ crtice hamburger menija */
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0 05, 1);
+  opacity: 0.7;
 }
 #menu li {
   padding: 10px 0;
@@ -251,6 +321,9 @@ crtice hamburger menija */
 }
 #menuToggle input:checked ~ ul {
   transform: none;
+}
+.img-menu {
+  border-radius: var(--readius);
 }
 /* 
 ============================ 
@@ -272,67 +345,7 @@ crtice hamburger menija */
 ------- animation ----------
 ============================
  */
-/* @keyframes bounce { */
-/* 0% { */
-/* transform: scale(1); */
-/* } */
-/* 50% { */
-/* transform: scale(2); */
-/* } */
-/* 100% { */
-/* transform: scale(1); */
-/* } */
-/* } */
-/* @keyframes slideFromRight { */
-/* 0% { */
-/* transform: translateX(1000px); */
-/* opacity: 0; */
-/* } */
-/* 50% { */
-/* transform: translateX(-200px); */
-/* opacity: 0.5; */
-/* } */
-/* 75% { */
-/* transform: translateX(50px); */
-/* opacity: 0.75; */
-/* } */
-/* 100% { */
-/* transform: translateX(0px); */
-/* opacity: 1; */
-/* } */
-/* } */
-/* @keyframes slideFromLeft { */
-/* 0% { */
-/* transform: translateX(-1000px); */
-/* opacity: 0; */
-/* } */
-/* 50% { */
-/* transform: translateX(200px); */
-/* opacity: 0.5; */
-/* } */
-/* 75% { */
-/* transform: translateX(-50px); */
-/* opacity: 0.75; */
-/* } */
-/* 100% { */
-/* transform: translateX(0px); */
-/* opacity: 1; */
-/* } */
-/* } */
-/* @keyframes show { */
-/* 0% { */
-/* transform: scale(1.5); */
-/* opacity: 0; */
-/* } */
-/* 50% { */
-/* transform: scale(2); */
-/* opacity: 0.5; */
-/* } */
-/* 100% { */
-/* transform: scale(1); */
-/* opacity: 1; */
-/* } */
-/* } */
+
 /* 
 ============================
  ---- end of animation ----- 
