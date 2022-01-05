@@ -275,9 +275,9 @@ crtice hamburger menija */
 /* prva crta */
 #menuToggle input:checked ~ span {
   opacity: 1;
-  transform: rotate(45deg) translate(0px, -1.54px);
+  transform: rotate(45deg) translate(2px, -3px);
   background: var(--clr-primery);
-  animation: y 2s 1;
+  animation: y 1s 1;
 }
 @media screen and (min-width: 350px) {
   @keyframes y {
@@ -285,7 +285,7 @@ crtice hamburger menija */
       transform: rotate(45deg);
     }
     100% {
-      transform: rotate(405deg);
+      transform: rotate(400deg);
       background: var(--clr-primery-light);
     }
   }
@@ -299,8 +299,8 @@ crtice hamburger menija */
 /* trca crta */
 /* rotacija trece crte da bude X */
 #menuToggle input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, 0.5px);
-  animation: x 2s 1;
+  transform: rotate(-45deg) translate(0px, 1px);
+  animation: x 1s 1;
 }
 @media screen and (min-width: 350px) {
   @keyframes x {
@@ -308,7 +308,7 @@ crtice hamburger menija */
       transform: rotate(-45deg);
     }
     100% {
-      transform: rotate(-405deg);
+      transform: rotate(-400deg);
       background: var(--clr-primery-light);
     }
   }
